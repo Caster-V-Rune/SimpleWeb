@@ -1,0 +1,30 @@
+<div class="modal fade" id="modal-upload-image" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                </button>
+                <h4 class="modal-title">上传图片</h4>
+            </div> <!-- .modal-header -->
+            <div class="modal-body">
+                <form id="modal-upload-image-form">
+                    <div class="form-group" action="/admin/upload/image" method="POST">
+                        <label for="modal-upload-image-form-file" class="control-label">
+                            选择文件:
+                        </label>
+                        <input id="modal-upload-image-form-file" type="file" name="image" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    确定
+                </button>
+            </div>
+        </div> <!-- .modal-content -->
+    </div> <!-- .modal-dialog -->
+</div> <!-- .modal.fade -->

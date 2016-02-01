@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Some Title</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index-page.css">
+    <link rel="stylesheet" href="/css/dock.css">
+    <link rel="stylesheet" href="/css/bs-fix.css">
+
+    <!-- backgrounds for images -->
+    <!-- TODO: background-img -->
+    <style>
+            {{#each sections}}
+            #{{id}} {
+                background-image: url({{url}});
+            }
+            {{/each}}
+
+            {{#each slides}}
+                {{id}} {
+                background-image: url({{url}});
+            }
+            {{/each}}
+    </style>
+
+</head>
+<body>
+
+<div id="console" style="position: fixed; top: 0; color: white; z-index: 999;"></div>
+
+<header id="nav-header" class="first-page">
+    <ul class="navmenu horizontal rightmenu">
+        <li>
+            <div class="dropdown">
+                <a id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true">
+                    <span>语言选择</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-lang">
+                    <li><a class="dropdown-item">简体中文</a></li>
+                    <li><a class="dropdown-item">English</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a>登录</a></li>
+    </ul>
+    <nav>
+        <ul id="slides-nav" class="navmenu horizontal">
+            {{#each header_type}}
+                <li><a data-index="{{id}}">{{value}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+</header>
+
+<!-- TODO: unify desktop and mobile header -->
+<header id="nav-header-mobile" class="first-page">
+    <div class="hamburger-mobile"><div class="fa fa-fw fa-bars fa-2x"></div></div>
+    <nav>
+        <ul id="slides-nav-mobile" class="navmenu navmenu-mobile">
+            {{#each header_type}}
+                <li><a data-index="{{id}}">{{value}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+</header>
+
+<div class="fullslide-container" id="slides">
+    <section class="fullslide-section" id="slide{{first_section.id}}" style="top: 0;">
+        <div class="horislide-container" id="index-slide">
+            {{#each sections}}
+                <section class="horislide-section" id="{{id}}" style="left: {{@index}}00%;">
+                    {{#if link}}
+                        <div class="landing-btn">
+                            <a href="{{link}}">
+                                <button class="btn btn-lg">查看</button>
+                            </a>
+                        </div>
+                    {{/if}}
+                </section>
+            {{/each}}
+        </div>
+
+        <div class="slides-box">
+            <div class="hori-indicator-cont">
+                {{#each sections}}
+                    <span class="hori-indicator" data-index="{{@index}}"></span>
+                {{/each}}
+            </div>
+            <div class="button-next-cont">
+                <div class="button-next">
+                    <div class="fa fa-angle-down fa-chevron-down fa-2x"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{#each middle_section}}
+        <section class="fullslide-section" id="slide{{id}}" style="top: {{id}}00%;">
+            <div class="img-mask bg-white"></div>
+            <div class="section-container">
+                <h2 class="section-title">{{value}}</h2>
+                <ul class="news-list">
+                    {{#each second_service}}
+                        <li class="news-item">
+                            <div class="news-icon-image">
+                                <img src="{{icon_url}}" />
+                            </div>
+                            {{#if link_url}}
+                                <h4><a href="{{link_url}}">{{name}}</a></h4>
+                            {{else}}
+                                <h4>{{name}}</h4>
+                            {{/if}}
+                            <div class="hover-dropmenu">
+                                {{#each third_service}}
+                                    <div><a href="{{link_url}}">{{name}}</a></div>
+                                {{/each}}
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    {{/each}}
+
+    <!-- SECTION: contact -->
+    <section class="fullslide-section flex-center-container" style="top: 600%;" id="slide6">
+        <div id="contact-left">
+            {{#each contact_info}}
+                <div>{{name}}：<span class="contact-info">{{value}}</span></div>
+            {{/each}}
+        </div>
+        <div id="contact-right">
+            <div id="map">
+                <!-- TODO: Baidu map API -->
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- right dock stuff -->
+<!-- TODO:docker -->
+<div id="docker">
+    <ul id="dock">
+        <li>
+            <div class="dock-icon fa fa-angle-up fa-fw" id="dock-up"></div>
+        </li>
+        <li>
+            <div class="dock-icon fa fa-qq fa-fw"></div>
+            <div class="dock-popup">
+                <div class="dock-popup-inner">
+                    {{docker.qq}}
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dock-icon fa fa-phone fa-fw"></div>
+            <div class="dock-popup">
+                <div class="dock-popup-inner">
+                    {{docker.tele}}
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dock-icon fa fa-wechat fa-fw"></div>
+            <div class="dock-popup">
+                <div class="dock-popup-inner">
+                    {{docker.wechat}}
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dock-icon fa fa-angle-down fa-fw" id="dock-down"></div>
+        </li>
+    </ul>
+    <div id="switch">
+        <div class="fa fa-plus-circle"></div>
+    </div>
+</div>
+
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+<script src="/js/fullslide.js"></script>
+<script src="/js/index.js"></script>
+
+<script>
+    "use strict";
+
+    // prepare fullSlide
+    //	for the whole page
+    $('#slides').fullSlide({
+        'numberOfSections': 7,
+        'scrollReversed': false,
+
+        // reactive header style with page sliding
+        'slideStart': function (start, end) {
+            if (end == 0) {
+                $('header').addClass('first-page').removeClass('non-first-page');
+            } else { $('header').removeClass('first-page').addClass('non-first-page'); }
+        }
+    });
+
+    // navigation bar, click link and scroll to some section
+    $('#slides-nav, #slides-nav-mobile').delegate('a', 'click', function (e) {
+        // NOTICE: you should keep the `currentIndex` as an integer
+        //	f*ck weak typing JavaScript
+        $('#slides').trigger('fslide-to', parseInt($(e.target).attr('data-index'))); });
+
+    $('#index-slide').fullSlide({
+        'numberOfSections': {{sections.length}},
+        'cyclic': true,
+        'direction': 'horizontal',
+        'hasScrollEvent': false,
+
+        'slideStart': function (start, end) {
+            $(
+                    $('.hori-indicator-cont .hori-indicator').
+                    removeClass('hori-indicator-active').get(end)
+            ).addClass('hori-indicator-active');
+        }
+    });
+    $(function () {
+        $($('.hori-indicator-cont .hori-indicator')[0]).
+        addClass('hori-indicator-active');
+    });
+    $('.hori-indicator-cont .hori-indicator').on('click', function (e) {
+        $('#index-slide').trigger('fslide-to', parseInt($(e.target).data('index'))); });
+    setInterval(function () {
+        $('#index-slide').trigger('fslide-next');
+    }, 3000);
+
+    $('#subcontact-container').fullSlide({
+        'numberOfSections': 2,
+        'cyclic': true,
+        'direction': 'horizontal',
+        'hasScrollEvent': false
+    });
+
+    // right dock and switch
+    $('#dock-up').on('click', function () {
+        $('#slides').trigger('fslide-prev'); });
+    $('#dock-down').on('click', function () {
+        $('#slides').trigger('fslide-next'); });
+    $('#switch').on('click', function () {
+        $('#docker').toggleClass('closed'); });
+
+    // next button at index section
+    $('.button-next').on('click', function (e) {
+        $('#slides').trigger('fslide-next'); });
+
+    // mobile-specific - hamburger menu switch
+    $('.hamburger-mobile').on('click', function (e) {
+        $(this).toggleClass('opened'); });
+
+    // scroll to a section at the beginning,
+    //	for faster debug.
+    // $(function () {
+    // 	setTimeout(function () { $('#slides').trigger('fslide-to', 6); }, 0);
+    // });
+</script>
+
+</body>
+</html>

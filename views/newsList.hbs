@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/stylesheets/bs-fix.css">
+<link rel="stylesheet" href="/stylesheets/news.css">
+
+	<div class="news-container">
+		<ol class="breadcrumb">
+
+			{{#each tabs}}
+				{{#if this.current}}
+				<li><a class="active">{{this.tab}}</a></li>
+				{{else}}
+				<li><a href="{{this.path}}">{{this.tab}}</a></li>
+				{{/if}}
+			{{/each}}
+		</ol>
+		{{#each newslist}}
+			<div class="news-entry">
+				<div class="news-top">
+					<h3><a href="/news/post/{{this.id}}">{{this.title}}</a></h3>
+					<div class="news-date">{{this.time}}</div>
+				</div>
+				<img src="{{this.img}}" />
+				<div class="news-bottom">
+					<p class="news-summary">
+						{{{this.desc}}}
+					</p>
+					<a href="/news/post/{{this.id}}">
+						<button class="btn news-fullbtn">阅读全文</button>
+					</a>
+				</div>
+			</div>
+
+		{{/each}}
+
+	<div id="footer">
+		<!-- TODO: 'copyright' symbol with escape -->
+		<!-- TODO: prevent improper wrapping on narrow screen -->
+		<div>Copyright © 2015 - 迈智（北京）咨询有限公司 北京市东城区, 名敦道7号楼1712室 100022</div>
+		<div>京ICP备05003365 京举报中心 webmaster@example.com</div>
+	</div>
+<!--
+</body>
+</html> -->

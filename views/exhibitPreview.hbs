@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>鉴赏</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bs-fix.css">
+    <link rel="stylesheet" href="/css/syt.css">
+    <link rel="stylesheet" href="/css/shop.css">
+</head>
+<body>
+<div class="shop-container">
+    <ol class="breadcrumb">
+        <li><a href="/">首页</a></li>
+        <li><a href="/exhibit">鉴赏</a></li>
+        <li class="active"><a href="/exhibit/{{type}}">{{type}}</a></li>
+    </ol>
+
+    <div class="shop-first-row">
+        <div class="simg-container">
+            <div class="simg-hero-cont">
+                <img class="simg-hero" src="{{pic1}}">
+                <div class="simg-hero-overlay simg-hover-show"></div>
+            </div>
+            <div class="simg-preview-zoom simg-hover-show"></div>
+            <ul class="simg-list">
+                <li><img src="{{pic1}}"></li>
+                {{#if pic2}}
+                    <li><img src="{{pic2}}"></li>
+                {{/if}}
+                {{#if pic3}}
+                    <li><img src="{{pic3}}"></li>
+                {{/if}}
+                {{#if pic4}}
+                    <li><img src="{{pic4}}"></li>
+                {{/if}}
+                {{#if pic5}}
+                    <li><img src="{{pic5}}"></li>
+                {{/if}}
+                {{#if pic6}}
+                    <li><img src="{{pic6}}"></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="shop-right-container">
+            <h4>{{name}}</h4>
+            <hr />
+            <div class="shop-description">
+                <p>
+                    {{description}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+</div>
+
+
+<div id="footer">
+    <div class="nowrap-parent"><span>Copyright &copy; 2015 - 迈智（北京）咨询有限公司</span> <span>北京市东城区, 名敦道7号楼1712室 100022</span></div>
+    <div class="nowrap-parent"><span>京ICP备05003365</span> <span>京举报中心 webmaster@example.com</span></div>
+</div>
+
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/imgscale.js"></script>
+<script>
+    $(function () {
+        $('.simg-preview-zoom').imageScaleFrom(
+                $('.simg-hero-cont'),
+                {
+                    'autoScale': true,
+                    // 'moveOverlay': $('.simg-hero-overlay'),
+                    'moveCallback': function (rect) {
+                        $('.simg-hero-overlay').css({
+                            'width': rect['width'],
+                            'height': rect['height'],
+                            'top': rect['top'],
+                            'left': rect['left']
+                        });
+                    }
+                });
+
+        $('.simg-hero-cont').hover(
+                function () { $('.simg-hover-show').addClass('hover'); },
+                function () { $('.simg-hover-show').removeClass('hover'); });
+
+        $('.simg-list li').hover(function () {
+            $('.simg-list li').removeClass('hover');
+            $(this).addClass('hover');
+
+            $('.simg-hero').attr('src', $(this).children('img')[0].src);
+            $('.simg-preview-zoom').imageScaleUpdate();
+        });
+    });
+</script>
+</body>
+</html>

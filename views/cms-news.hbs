@@ -1,0 +1,464 @@
+ <meta name="viewport" content="width=device-width">
+<!-- <link href="/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/metisMenu.min.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+<link href="/css/sb-admin-2.css" rel="stylesheet">
+<link href="/css/morris.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/css/cms.css" rel="stylesheet">
+<link href="/css/cms-news.css" rel="stylesheet">
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/admin">admin</a>
+      </div>
+      <ul class="nav navbar-top-links navbar-right">
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                  <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                  <li>
+                      <a href="/admin/logout">
+                          <i class="fa fa-sign-out fa-fw"></i> Logout
+                      </a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+      <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+              <ul class="nav" id="side-menu">
+                  <li>
+                      <a href="#"><i class="fa fa-sitemap fa-fw"></i>CMS<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li>
+                              <a href="/admin/cms/">{{f0}}</a>
+                          </li>
+                          <li>
+                              <a href="#">{{f1}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/1/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/1">{{s10}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/2">{{s11}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/3">{{s12}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f2}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/2/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/1">{{s20}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/2">{{s21}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/3">{{s22}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/4">{{s23}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f3}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/3/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/1">{{s30}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/2">{{s31}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/3">{{s32}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f4}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/4/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/1">{{s40}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/2">{{s41}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/3">{{s42}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/4">{{s43}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f5}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/5/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/1">{{s50}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/2">{{s51}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/3">{{s52}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f6}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/6/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/6">信息</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                      <!-- /.nav-second-level -->
+                  </li>
+                  <li>
+                      <a href="/admin/newsManage/"><i class="fa fa-sitemap fa-fw"></i>资讯管理</a>
+                  </li>
+                  <li>
+                      <a href="/admin/exhibit/"><i class="fa fa-sitemap fa-fw"></i>藏品管理</a>
+                  </li>
+                  <li>
+                      <a href="/admin/updatePasswd/"><i class="fa fa-sitemap fa-fw"></i>修改用户名密码</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.sidebar-collapse -->
+      </div>
+    </nav>
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">
+          <div v1="header_type" v2="0" v3="id" v4="name">资讯管理</div>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a class="flip"><i class="fa fa-caret-down fa-fw"></i>添加新资讯</a>
+            </div>
+            <div class="panel-body">
+              <div id="addNewPost">
+                <div id="alerts"></div>
+                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                  <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" title="字体"><i class="fa fa-font"></i><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" title="字体大小"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a data-edit="fontSize 5">
+                          <font size="5">大</font>
+                        </a>
+                      </li>
+                      <li>
+                        <a data-edit="fontSize 3">
+                          <font size="3">中</font>
+                        </a>
+                      </li>
+                      <li>
+                        <a data-edit="fontSize 1">
+                          <font size="1">小</font>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn" data-edit="bold" title="加粗 (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                    <a class="btn" data-edit="italic" title="斜体 (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                    <a class="btn" data-edit="strikethrough" title="删除线"><i class="fa fa-strikethrough"></i></a>
+                    <a class="btn" data-edit="underline" title="下划线 (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn" data-edit="insertunorderedlist" title="圆点列表"><i class="fa fa-list-ul"></i></a>
+                    <a class="btn" data-edit="insertorderedlist" title="数字列表"><i class="fa fa-list-ol"></i></a>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn" data-edit="justifyleft" title="居左 (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                    <a class="btn" data-edit="justifycenter" title="居中 (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                    <a class="btn" data-edit="justifyright" title="居右 (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                    <a class="btn" data-edit="justifyfull" title="对齐 (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" title="添加链接"><i class="fa fa-link"></i></a>
+                    <div class="dropdown-menu input-append">
+                      <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                      <button class="btn" type="button">Add</button>
+                    </div>
+                    <a class="btn" data-edit="unlink" title="删除链接"><i class="fa fa-cut"></i></a>
+                  </div>
+                  <div class="btn-group">
+                    <a class="btn" title="插入图片" id="pictureBtn"><i class="fa fa-image"></i>
+                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                    </a>
+                  </div>
+                  <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
+                </div>
+                <div class="emp"></div>
+                <span style="font-size:19px;">题目: </span>
+                <input type="text" class="titleInput" id="tt">
+                <br>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <span style="font-size:19px;">类型：</span>
+                    <select class="sel form-control" name="category" id="sel">
+                      <option value="0">国际展会</option>
+                      <option value="1">国内展会</option>
+                      <option value="2">联合展会</option>
+                      <option value="3">国内拍卖</option>
+                      <option value="4">国际拍卖</option>
+                      <option value="5">联合拍卖</option>
+                      <option value="6">公益拍卖</option>
+                      <option value="7">活动资讯</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <span style="font-size:19px;">内容：</span>
+                <div id="editor"></div>
+                <button id="button" class="btn btn-primary">提交</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a class="flip1"><i class="fa fa-caret-down fa-fw"></i>管理</a>
+            </div>
+            <div class="panel-body" id="manage">
+              <table class="table table-striped">
+                <thead>
+                  <th>ID</th>
+                  <th>标题名</th>
+                  <th>类别</th>
+                  <th>操作</th>
+                </thead>
+                <tbody>
+                  {{#each posts}}
+                  <tr>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{cat}}</td>
+                    <td><a class="viewPost" id= {{id}}>查看</a>/ <a class="delPost" id="del-{{id}}">删除</a></td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery-2.1.4.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/metisMenu.min.js"></script>
+  <script src="/js/raphael-min.js"></script>
+  <script src="/js/sb-admin-2.js"></script>
+  <script src="/js/cms.js"></script>
+  <script src="/js/bootstrap-wysiwyg.js"></script>
+  <script src="/js/jquery.hotkeys.js"></script>
+  <script type="text/javascript">
+    var flag = 1;
+
+    function doneSomethingOnContent(str) {
+      var ret = str;
+      if (ret[0] != '<') {
+        word = ret.split('<div>')[0];
+        regex = new RegExp(word);
+        ret = ret.replace(regex, '<div>' + word + '</div>');
+      }
+      return ret;
+    }
+
+    function getDesc(str){
+      var ret = str.replace(/<img[^>]+>/g,"");
+      ret = str.replace(/<br>/g, "");
+      var elem= document.createElement("div");
+      elem.innerHTML = ret;
+      var images = elem.getElementsByTagName("div");
+      for(var i=0; i < images.length; i++){
+        var value = images[i].innerText;
+        if (value != "") {
+          ret = value;
+          break;
+        }
+      }
+       return ret;
+    }
+
+    $(document).ready(function() {
+      $(".viewPost").click(function() {
+        var id = $(this).attr('id');
+        var link = '/news/post/' + id;
+        window.location.href = link;
+      })
+      $(".flip").click(function() {
+        if (0 == flag) {
+          $("#addNewPost").slideUp("10000");
+          flag = 1;
+          $(".flip").html("<i class=\"fa fa-caret-down fa-fw\"></i>添加新资讯");
+        } else {
+          $("#addNewPost").slideDown("10000");
+          flag = 0;
+          $(".flip").html("<i class=\"fa fa-caret-up fa-fw\"></i>收起");
+        }
+      });
+      $(".flip1").click(function() {
+        if (0 == flag) {
+          $("#manage").slideUp("10000");
+          flag = 1;
+          $(".flip1").html("<i class=\"fa fa-caret-down fa-fw\"></i>管理");
+        } else {
+          $("#manage").slideDown("10000");
+          flag = 0;
+          $(".flip1").html("<i class=\"fa fa-caret-up fa-fw\"></i>收起");
+        }
+      });
+      $(".delPost").click(function() {
+        var id = $(this).attr('id');
+        id = id.split('-')[1];
+        var request = $.ajax({
+          url: "/admin/delPost",
+          type: "POST",
+          data: {
+            id: id
+          }
+        });
+        request.done(function(msg) {
+          alert("删除成功");
+          window.location.href = '/admin/newsManage';
+        });
+        request.fail(function(jqXHR, textStatus) {
+          alert("删除出错");
+        });
+      });
+      $("#button").click(function() {
+        var choice = confirm("确定提交?");
+        if (choice) {
+          var title = $('#tt').val();
+          var content = $('#editor').html();
+          var cat = $('#sel :selected').val();
+          content = doneSomethingOnContent(content);
+          var desc = getDesc(content);
+          // alert(content.length);
+          var request = $.ajax({
+            url: "/admin/savePost/",
+            type: "POST",
+            data: {
+              title: title,
+              category: cat,
+              content: content,
+              desc: desc
+            }
+          });
+          request.done(function(msg) {
+            alert('添加资讯成功！');
+            window.location.href = "/admin/";
+          });
+          request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+          });
+        }
+      });
+
+      function initToolbarBootstrapBindings() {
+        var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+            'Times New Roman', 'Verdana'
+          ],
+          fontTarget = $('[title=字体]').siblings('.dropdown-menu');
+        $.each(fonts, function(idx, fontName) {
+          fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
+        });
+        $('a[title]').tooltip({
+          container: 'body'
+        });
+        $('.dropdown-menu input').click(function() {
+            return false;
+          })
+          .change(function() {
+            $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+          })
+          .keydown('esc', function() {
+            this.value = '';
+            $(this).change();
+          });
+        $('[data-role=magic-overlay]').each(function() {
+          var overlay = $(this),
+            target = $(overlay.data('target'));
+          overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+        });
+        if ("onwebkitspeechchange" in document.createElement("input")) {
+          var editorOffset = $('#editor').offset();
+          $('#voiceBtn').css('position', 'absolute').offset({
+            top: editorOffset.top,
+            left: editorOffset.left + $('#editor').innerWidth() - 35
+          });
+        } else {
+          $('#voiceBtn').hide();
+        }
+      };
+
+      function showErrorAlert(reason, detail) {
+        var msg = '';
+        if (reason === 'unsupported-file-type') {
+          msg = "Unsupported format " + detail;
+        } else {
+          console.log("error uploading file", reason, detail);
+        }
+        $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+          '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+      };
+      initToolbarBootstrapBindings();
+      $('#editor').wysiwyg({
+        fileUploadError: showErrorAlert
+      });
+      window.prettyPrint && prettyPrint();
+    });
+  </script>

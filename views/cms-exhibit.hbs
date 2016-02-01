@@ -1,0 +1,395 @@
+<meta name="viewport" content="width=device-width">
+<!-- <link href="/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/metisMenu.min.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+<link href="/css/sb-admin-2.css" rel="stylesheet">
+<link href="/css/morris.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/css/cms.css" rel="stylesheet">
+<link href="/css/cms-news.css" rel="stylesheet">
+
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/admin">admin</a>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-user fa-fw"></i>
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+          <li>
+            <a href="/admin/logout">
+              <i class="fa fa-sign-out fa-fw"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+      <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+              <ul class="nav" id="side-menu">
+                  <li>
+                      <a href="#"><i class="fa fa-sitemap fa-fw"></i>CMS<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li>
+                              <a href="/admin/cms/">{{f0}}</a>
+                          </li>
+                          <li>
+                              <a href="#">{{f1}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/1/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/1">{{s10}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/2">{{s11}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/1/3">{{s12}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f2}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/2/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/1">{{s20}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/2">{{s21}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/3">{{s22}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/2/4">{{s23}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f3}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/3/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/1">{{s30}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/2">{{s31}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/3/3">{{s32}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f4}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/4/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/1">{{s40}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/2">{{s41}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/3">{{s42}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/4/4">{{s43}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f5}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/5/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/1">{{s50}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/2">{{s51}}</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/5/3">{{s52}}</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">{{f6}}<span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                      <a href="/admin/cms/6/0">背景</a>
+                                  </li>
+                                  <li>
+                                      <a href="/admin/cms/6">信息</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                      <!-- /.nav-second-level -->
+                  </li>
+                  <li>
+                      <a href="/admin/newsManage/"><i class="fa fa-sitemap fa-fw"></i>资讯管理</a>
+                  </li>
+                  <li>
+                      <a href="/admin/exhibit/"><i class="fa fa-sitemap fa-fw"></i>藏品管理</a>
+                  </li>
+                  <li>
+                      <a href="/admin/updatePasswd/"><i class="fa fa-sitemap fa-fw"></i>修改用户名密码</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.sidebar-collapse -->
+      </div>
+    </nav>
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">
+              藏品管理
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a class="flip"><i class="fa fa-caret-down fa-fw"></i>添加新藏品</a>
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            操作
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#modal-upload-image">
+                                    上传图片
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+              <div id="addNewPost">
+                <div id="alerts"></div>
+                <span style="font-size:19px;">藏品名称: </span>
+                <input type="text" class="titleInput form-control" id="tt">
+                <br>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <span style="font-size:19px;">类型：</span>
+                    <select class="sel form-control" name="category" id="sel">
+                      <option value="0">陶器逸珍</option>
+                      <option value="1">瓷器逸珍</option>
+                      <option value="2">木器逸珍</option>
+                      <option value="3">玉器逸珍</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div style="font-size:19px;">描述：</div>
+                <textarea id="editor" class="form-control" rows="3"></textarea>
+                  <br>
+                  <div class="row">
+                      <div class="col-md-11">
+                          <div id="exhibits-img"></div>
+                      </div>
+                      <div class="col-md-1">
+                          <button id="button" class="btn btn-primary">提交</button>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+        <div class="col-lg-11">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a class="flip1"><i class="fa fa-caret-down fa-fw"></i>管理</a>
+            </div>
+            <div class="panel-body" id="manage">
+              <table class="table table-striped">
+                <thead>
+                  <th>ID</th>
+                  <th>标题名</th>
+                  <th>类别</th>
+                  <th>操作</th>
+                </thead>
+                <tbody>
+                  {{#each posts}}
+                  <tr>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{cat}}</td>
+                    <td><a class="viewPost" id= {{id}}>查看</a>/ <a class="delPost" id="del-{{id}}">删除</a></td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{> cms_image_upload_modal}}
+  <script src="/js/jquery-2.1.4.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/metisMenu.min.js"></script>
+  <script src="/js/raphael-min.js"></script>
+  <script src="/js/sb-admin-2.js"></script>
+  <script src="/js/cms.js"></script>
+  <script src="/js/bootstrap-wysiwyg.js"></script>
+  <script src="/js/jquery.hotkeys.js"></script>
+<script src="/js/exhibit_image_upload.js"></script>
+
+  <script type="text/javascript">
+    var flag = 1;
+    $(function () {
+        var slides_id = -1;
+        imageUpload({});
+
+    });
+    $(document).ready(function() {
+      $(".viewPost").click(function() {
+        var id = $(this).attr('id');
+        var link = '/exhibit/show/' + id;
+        window.location.href = link;
+      })
+      $(".flip").click(function() {
+        if (0 == flag) {
+          $("#addNewPost").slideUp("10000");
+          flag = 1;
+          $(".flip").html("<i class=\"fa fa-caret-down fa-fw\"></i>添加新藏品");
+        } else {
+          $("#addNewPost").slideDown("10000");
+          flag = 0;
+          $(".flip").html("<i class=\"fa fa-caret-up fa-fw\"></i>收起");
+        }
+      });
+      $(".flip1").click(function() {
+        if (0 == flag) {
+          $("#manage").slideUp("10000");
+          flag = 1;
+          $(".flip1").html("<i class=\"fa fa-caret-down fa-fw\"></i>管理");
+        } else {
+          $("#manage").slideDown("10000");
+          flag = 0;
+          $(".flip1").html("<i class=\"fa fa-caret-up fa-fw\"></i>收起");
+        }
+      });
+      $(".delPost").click(function() {
+        var id = $(this).attr('id');
+        id = id.split('-')[1];
+        var request = $.ajax({
+          url: "http://localhost:3000/admin/exhibit/del",
+          type: "POST",
+          data: {
+            id: id
+          }
+        });
+        request.done(function(msg) {
+          alert("删除成功");
+          window.location.href = 'http://localhost:3000/admin/exhibit';
+        });
+        request.fail(function(jqXHR, textStatus) {
+          alert("删除出错");
+        });
+      });
+      $("#button").on('click',function() {
+        var choice = confirm("确定提交?");
+        if (choice) {
+          var title = $('#tt').val();
+            if (title == '') {
+                alert("标题不可为空");
+                return false;
+            }
+          var content = $('#editor').val();
+            if (content == '') {
+                console.log(content);
+                alert("描述不可为空");
+                return false;
+            }
+            var cat = -1;
+          cat = $('#sel :selected').val();
+            if (cat == -1) {
+                alert("必须选择分类");
+                return false;
+            }
+            var urls = [];
+            $('#exhibits-img').children('div.imgs').each(function(i,e){
+
+                urls.push($($(e).children('a')[0]).attr('href'));
+
+            });
+            console.log(urls);
+            if (urls.length == 0){
+                alert("至少添加一张图片!");
+                return false;
+            }
+          var request = $.ajax({
+            url: "http://localhost:3000/admin/exhibit/save/",
+            type: "POST",
+            data: {
+              title: title,
+              category: cat,
+              content: content,
+              urls: urls
+            }
+          });
+          request.done(function(msg) {
+            alert('添加成功！');
+            window.location.href = "http://localhost:3000/admin/exhibit";
+          });
+          request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+          });
+        }
+      });
+
+
+    });
+    var delImg = function (c, imgname){
+        var request = $.ajax({
+            url: "http://localhost:3000/admin/exhibit/delImg",
+            type: "POST",
+            data: {
+                img: imgname
+            }
+        });
+        request.done(function(msg) {
+            $(c).parent('.imgs').remove();
+        });
+        request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+    }
+  </script>

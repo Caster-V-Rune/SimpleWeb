@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>展示</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/font-awesome.css">
+	<link rel="stylesheet" href="/css/bs-fix.css">
+    <link rel="stylesheet" href="/css/syt.css">
+	<link rel="stylesheet" href="/css/preview.css">
+</head>
+<body>
+	<div class="gen-container">
+		<ol class="breadcrumb">
+            <!-- TODO: modify it for the requirement -->
+			<li><a href="/">首页</a></li>
+			<li><a href="/exhibit">展品</a></li>
+			<li class="active">{{type}}</li>
+		</ol>
+		
+        <div class="pre-container">
+            {{#each exhibits}}
+                <div class="pre-cell">
+                    <div class="pre-hero-cont">
+                        <a href="/exhibit/show/{{this.id}}"><img class="pre-hero" src="{{this.pic1}}"></a>
+                        <img class="pre-hero-overlay">
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <!--<div style="margin:auto auto;">-->
+            <!--<nav>-->
+                <!--<ul class="pagination">-->
+                    <!--<li>-->
+                        <!--<a href="#" aria-label="Previous">-->
+                            <!--<span aria-hidden="true">&laquo;</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li><a href="#">1</a></li>-->
+                    <!--<li><a href="#">2</a></li>-->
+                    <!--<li><a href="#">3</a></li>-->
+                    <!--<li><a href="#">4</a></li>-->
+                    <!--<li><a href="#">5</a></li>-->
+                    <!--<li>-->
+                        <!--<a href="#" aria-label="Next">-->
+                            <!--<span aria-hidden="true">&raquo;</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+        <!--</div>-->
+    </div>
+
+    <hr />
+
+    
+    <div id="footer">
+		<div class="nowrap-parent"><span>Copyright &copy; 2015 - 迈智（北京）咨询有限公司</span> <span>北京市东城区, 名敦道7号楼1712室 100022</span></div>
+		<div class="nowrap-parent"><span>京ICP备05003365</span> <span>京举报中心 webmaster@example.com</span></div>
+	</div>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {			
+			Array.prototype.forEach.call(document.getElementsByClassName('pre-hero-cont'),
+                function (e) {
+                    e.getElementsByClassName('pre-hero-overlay')[0].src = 
+                        e.getElementsByClassName('pre-hero')[0].src;
+                });
+		});
+	</script>
+</body>
+</html>

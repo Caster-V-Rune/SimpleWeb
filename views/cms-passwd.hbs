@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/metisMenu.min.css" rel="stylesheet">
+    <link href="/css/timeline.css" rel="stylesheet">
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/css/morris.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/cms.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/admin">admin</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <!--<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>-->
+                    <!--</li>-->
+                    <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>-->
+                    <!--</li>-->
+                    <!--<li class="divider"></li>-->
+                    <li><a href="/admin/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>CMS<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/admin/cms/">{{f0}}</a>
+                            </li>
+                            <li>
+                                <a href="#">{{f1}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/1/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/1/1">{{s10}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/1/2">{{s11}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/1/3">{{s12}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{{f2}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/2/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/2/1">{{s20}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/2/2">{{s21}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/2/3">{{s22}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/2/4">{{s23}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{{f3}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/3/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/3/1">{{s30}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/3/2">{{s31}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/3/3">{{s32}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{{f4}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/4/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/4/1">{{s40}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/4/2">{{s41}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/4/3">{{s42}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/4/4">{{s43}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{{f5}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/5/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/5/1">{{s50}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/5/2">{{s51}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/5/3">{{s52}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{{f6}}<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/admin/cms/6/0">背景</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/cms/6">信息</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="/admin/newsManage/"><i class="fa fa-sitemap fa-fw"></i>资讯管理</a>
+                    </li>
+                    <li>
+                        <a href="/admin/exhibit/"><i class="fa fa-sitemap fa-fw"></i>藏品管理</a>
+                    </li>
+                    <li>
+                        <a href="/admin/updatePasswd/"><i class="fa fa-sitemap fa-fw"></i>修改用户名密码</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">修改密码</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-11">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            修改密码
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>用户名</label>
+                                    <input class="form-control" placeholder="用户名" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label>新密码</label>
+                                    <input class="form-control" type="password" placeholder="新密码" id="new1">
+                                </div>
+                                <div class="form-group">
+                                    <label>确认密码</label>
+                                    <input class="form-control" type="password" placeholder="确认密码" id="new2">
+                                </div>
+                                <input style="margin-top: 10px;" type="button" value="提交" class="btn btn-primary" onclick="updatePass()"/>
+                            </form>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/metisMenu.min.js"></script>
+<script src="/js/raphael-min.js"></script>
+<!--<script src="/js/morris.min.js"></script>-->
+<!--<script src="/js/morris-data.js"></script>-->
+<script src="/js/sb-admin-2.js"></script>
+<script src="/js/cms.js"></script>
+
+<script>
+    $(function () {
+
+        $('[data-target="#modal-upload-image"]').on('click', function (e) {
+            slides_id = parseInt($(e.target).data('slides-id')); });
+    });
+    function updatePass(){
+        var name = $('#username').val();
+        var new1 = $('#new1').val();
+        var new2 = $('#new2').val();
+
+        if (new1 !== new2){
+            alert('两次密码不一致!');
+            return false;
+        }
+        else{
+            var request = $.ajax({
+                url: "/admin/updatePasswd/",
+                type: "POST",
+                data: {
+                    username: name,
+                    passwd: new1
+                }
+            });
+            request.done(function(msg) {
+                alert('更新成功');
+                window.location.href = "/admin/updatePasswd/";
+            });
+            request.fail(function(jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+        }
+
+    };
+</script>
+
+</body>
+
+</html>
